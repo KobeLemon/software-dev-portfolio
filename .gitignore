@@ -1,3 +1,5 @@
 .vs
 
 .github
+
+/obj/Debug
