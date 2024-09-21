@@ -6,6 +6,8 @@ My name is Kobe Lemon and I am a Software Developer! This project is a platform 
 
 [Software Demo Video](https://www.youtube.com/watch?v=-s2TUZDD0G0)
 
+[Plan It All - GitHub Pages](URLHere)
+
 ## Web Pages
 
 {Describe each of the web pages you created and how the web app transitions between each of them.  Also describe what is dynamically created on each page.}
@@ -22,7 +24,6 @@ My name is Kobe Lemon and I am a Software Developer! This project is a platform 
 - [W3 Schools](https://www.w3schools.com/)
 
 ## Future Work
-{A list of things that I need to fix, improve, and add in the future.}
 
 - Item 1
 - Item 2
