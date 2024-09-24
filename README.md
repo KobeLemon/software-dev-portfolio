@@ -1,12 +1,12 @@
-# Plan It All
+# Kobe's Software Development Portfolio
 
 ## Overview
 
-My name is Kobe Lemon and I am a Software Developer! This project is a platform where a user can create a custom planner to track anything they want to, like a meal planner, chore chart, bills tracker, etc. With a custom planner, you can set the name & date range, then you will be taken to a planner template where you can then add new items to track.
+My name is Kobe Lemon and I am a Software Developer! This is my portfolio that shows several of my software development projects throughout my journey as a software developer. I have built this portfolio as it's own project and it is built to be interactive, interesting, and descriptive.
 
-[Software Demo Video](https://www.youtube.com/watch?v=-s2TUZDD0G0)
+[Software Demo Video](YTVidLinkHere)
 
-[Plan It All - GitHub Pages](URLHere)
+[Portfolio Site - GitHub Pages](URLHere)
 
 ## Web Pages
 
@@ -16,7 +16,6 @@ My name is Kobe Lemon and I am a Software Developer! This project is a platform 
 
 - Code Editor: Visual Studio Code
 - Language: HTML, CSS, C#, & Blazor.
-- Database: MongoDB
 
 ## Useful Websites
 
