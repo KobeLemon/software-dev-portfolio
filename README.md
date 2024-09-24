@@ -6,7 +6,7 @@ My name is Kobe Lemon and I am a Software Developer! This is my portfolio that s
 
 [Software Demo Video](YTVidLinkHere)
 
-[Portfolio Site - GitHub Pages](URLHere)
+[Portfolio Site - GitHub Pages](https://kobelemon.github.io/software-dev-portfolio/)
 
 ## Web Pages
 
@@ -14,8 +14,8 @@ My name is Kobe Lemon and I am a Software Developer! This is my portfolio that s
 
 ## Development Environment
 
-- Code Editor: Visual Studio Code
-- Language: HTML, CSS, C#, & Blazor.
+- Code Editors: Visual Studio Code & Visual Studio 2022
+- Languages: C#, Blazor, HTML, & CSS.
 
 ## Useful Websites
 
