@@ -1,5 +1,5 @@
 {
-  "entryAssembly": "plan-it-all",
+  "entryAssembly": "software-dev-portfolio",
   "resources": {
     "hash": "sha256-iib2E0cC1OdPaYTe+8O1l0zGr1SDG+QeRUZlUsf71zc=",
     "runtime": {
@@ -200,10 +200,10 @@
       "mscorlib.dll": "sha256-er6cLjOyu1s02HPaReJi0KkBwOSQyQ0/T8lVwYrQmwE=",
       "netstandard.dll": "sha256-UjAkjmlOWOKd1d6UaAYFH6rO8pqwuoCKrs8+TW10Xvk=",
       "System.Private.CoreLib.dll": "sha256-uAJxx8FtA3E57cEa87ZsxFWqQmHkAYyH5WNbmii0koQ=",
-      "plan-it-all.dll": "sha256-/Ailh4vKlzRuLYZnk5qB1c1UaGc+sfjoc+igPGSdNfQ="
+      "software-dev-portfolio.dll": "sha256-/Ailh4vKlzRuLYZnk5qB1c1UaGc+sfjoc+igPGSdNfQ="
     },
     "pdb": {
-      "plan-it-all.pdb": "sha256-s/gfN/GFURQ9XyoGU1sflVa/CZQCghee8rEyiKBu5n0="
+      "software-dev-portfolio.pdb": "sha256-s/gfN/GFURQ9XyoGU1sflVa/CZQCghee8rEyiKBu5n0="
     },
     "runtimeAssets": {
       "dotnet.wasm": {
