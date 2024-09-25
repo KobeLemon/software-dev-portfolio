@@ -184,7 +184,7 @@ nav {
     width: 45%;
 }
 
-.portalLI iframe {
+iframe {
     margin-top: 1rem;
     width: 100%;
     height: 500px;

@@ -1,0 +1,23 @@
+﻿@foreach(var item in portfolioLinksList)
+{
+    <PortfolioItem portfolioLink="@item.Key" description="@item.Value"></PortfolioItem>
+}
+
+@code {
+    // Key: portfolio item's link to Demo
+    // Value: portfolio item's description
+    Dictionary<string, string> portfolioLinksList = new Dictionary<string, string>
+    {
+        // Geolocator App
+        {
+            "https://kobelemon.github.io/geolocator-app/", 
+            "Description of Geolocator goes here"
+        },
+        // Star Wars API Demo App
+        {
+            "https://kobelemon.github.io/swapi-demo-app/", 
+            "Description of Swapi Demo App goes here"
+        }
+    };
+
+}

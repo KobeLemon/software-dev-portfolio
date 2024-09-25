@@ -22,4 +22,17 @@
     <script src="_framework/blazor.webassembly.js"></script>
 </body>
 
+<script>
+    function disableIframeInteraction() {
+        const iframe = document.getElementById("snapshotFrame");
+        if (iframe) {
+            // Try to disable interaction with the iframe by setting CSS properties
+            iframe.contentWindow.document.body.style.pointerEvents = 'none';
+            iframe.contentWindow.document.body.style.userSelect = 'none';
+            iframe.contentWindow.document.body.style.overflow = 'hidden'; // Disable scroll
+            iframe.contentWindow.document.body.setAttribute('unselectable', 'on'); // Ensure text can't be selected
+        }
+    }
+</script>
+
 </html>

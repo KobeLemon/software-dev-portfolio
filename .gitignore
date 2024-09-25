@@ -4,4 +4,6 @@
 
 .github
 
-/obj
+/bin/Debug
+
+/obj/Debug
