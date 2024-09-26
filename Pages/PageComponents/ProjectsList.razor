@@ -41,38 +41,28 @@
             <label for="nameDesc">Z-A</label>
         </section>
 
-        @* Language -- NOT WORKING AT THE MOMENT *@
-        @* <section class="sort-btn-individual">
-            <label for="languages">Language</label>
-            <select id="languages" multiple @bind="@SelectedLanguages">
-                @foreach (var language in AvailableLanguages)
-                {
-                    <option value="@language">@language</option>
-                }
-            </select>
-        </section> *@
     </section>
 </section>
 
 <hr />
 
-@* This is where all of the projects are inserted *@
 @* Display sorted project items *@
 <ul class="project-items-list">
-    @foreach (var item in FilteredProjectItems)
+    @foreach (var item in SortedProjectItems)
     {
         <ProjectItemComponent 
             Link="@item.Link"
             Description="@item.Description"
-            Name="@item.Name">
-        </ProjectItemComponent>
+            Name="@item.Name"></ProjectItemComponent>
     }
-
+    <li style="text-align:center;"><a href="/projects">Back to Top</a></li>
 </ul>
 
 @code {
     // Default Title is blank
     public string? title;
+
+    private string? currentSort;
 
     private List<ProjectItem>? ProjectItems = new List<ProjectItem>
     {
@@ -113,69 +103,33 @@
             Language = "HTML/CSS/JavaScript"
         },
     };
-
-    private List<ProjectItem>? FilteredProjectItems = new List<ProjectItem>();
-
-    private List<string> SelectedLanguages = new List<string>();
-
-    private List<string>? AvailableLanguages = new List<string> { "HTML", "CSS", "JavaScript", "C#", "Blazor", "Python" };
-
-    private string? currentSort;
+    
+    private List<ProjectItem>? SortedProjectItems;
 
     protected override void OnInitialized()
     {
-        FilteredProjectItems = ProjectItems;
+        SortedProjectItems = ProjectItems;
         currentSort = "default"; // Default sorting
     }
 
     private void SortProjects(ChangeEventArgs e)
     {
-        currentSort = e.Value.ToString(); // Capture the selected sorting option
-        SortItems();
-    }
+        currentSort = e.Value.ToString();
 
-    private void SortItems()
-    {
         switch (currentSort)
         {
             case "nameAsc":
-                title = "- A-Z";
-                FilteredProjectItems = FilteredProjectItems?.OrderBy(p => p.Name).ToList();
+                SortedProjectItems = ProjectItems.OrderBy(p => p.Name).ToList();
                 break;
 
             case "nameDesc":
-                title = "- Z-A";
-                FilteredProjectItems = FilteredProjectItems?.OrderByDescending(p => p.Name).ToList();
+                SortedProjectItems = ProjectItems.OrderByDescending(p => p.Name).ToList();
                 break;
 
             default:
-                title = "";
-                FilteredProjectItems = FilteredProjectItems;
+                SortedProjectItems = ProjectItems;
                 break;
         }
-    }
-
-    private void FilterItems()
-    {
-        if (SelectedLanguages.Count > 0)
-        {
-            FilteredProjectItems = ProjectItems
-                .Where(p => SelectedLanguages.Contains(p.Language))
-                .ToList();
-        }
-        else
-        {
-            FilteredProjectItems = ProjectItems; // Reset to all items if no language is selected
-        }
-
-        // Sort again after filtering to maintain the current sort order
-        SortItems();
-    }
-
-    // Trigger filter when selected languages change
-    private void OnSelectedLanguagesChanged()
-    {
-        FilterItems();
     }
 
     // Properties to track which sorting option is selected
@@ -195,4 +149,3 @@
         public string? Language { get; set; }
     }
 }
-
