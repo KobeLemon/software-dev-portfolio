@@ -1,6 +1,8 @@
-﻿@foreach(var item in portfolioLinksList)
+﻿<!-- Create a list of projects from a Dictionary -->
+
+@foreach(var item in portfolioLinksList)
 {
-    <PortfolioItem portfolioLink="@item.Key" description="@item.Value"></PortfolioItem>
+    <ProjectItem portfolioLink="@item.Key" description="@item.Value"></ProjectItem>
 }
 
 @code {
