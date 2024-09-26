@@ -6,45 +6,41 @@
     <section class="sort-btn-box">
 
         <section class="sort-btn-individual">
-            <input 
-                type="radio" 
-                id="default" 
-                class="sort-btn" 
-                name="default" 
-                value="default" 
+            <input type="radio"
+                id="default"
+                class="sort-btn"
+                name="default"
+                value="default"
                 @onclick='() => SortProject("default")'>
             <label for="default">Default</label>
         </section>
 
         <section class="sort-btn-individual">
-            <input 
-                type="radio" 
-                id="nameAsc" 
-                class="sort-btn" 
-                name="sort-type" 
-                value="nameAsc" 
+            <input type="radio"
+                id="nameAsc"
+                class="sort-btn"
+                name="sort-type"
+                value="nameAsc"
                 @onclick='() => SortProject("nameAsc")'>
             <label for="nameAsc">A-Z</label>
         </section>
 
         <section class="sort-btn-individual">
-            <input 
-                type="radio" 
-                id="nameDesc" 
-                class="sort-btn" 
-                name="sort-type" 
-                value="nameDesc" 
+            <input type="radio"
+                id="nameDesc"
+                class="sort-btn"
+                name="sort-type"
+                value="nameDesc"
                 @onclick='() => SortProject("nameDesc")'>
             <label for="nameDesc">Z-A</label>
         </section>
 
         <section class="sort-btn-individual">
-            <input 
-                type="radio" 
-                id="language" 
-                class="sort-btn" 
-                name="sort-type" 
-                value="language" 
+            <input type="radio"
+                id="language"
+                class="sort-btn"
+                name="sort-type"
+                value="language"
                 @onclick='() => SortProject("language")'>
             <label for="language">Language</label>
         </section>
@@ -87,6 +83,13 @@
             Description="Description of Bountiful Foods goes here",
             Language = "HTML/CSS/JavaScript"
         },
+        new ProjectItem {
+            Name = "CSS Keyframes Presentation",
+            Link = "/projects/keyframes-presentation/index.html",
+            Description="Description of keyframes-presentation goes here",
+            Language = "HTML/CSS/JavaScript"
+        },
+
     };
 
     private List<ProjectItem>? SortedProjectItems;
