@@ -13,7 +13,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 120px;
+    padding-bottom: 50px;
+    /*width: 90%;*/
 }
 
 h1, h2 {
@@ -176,46 +177,6 @@ nav {
 
 
 /*========= Start of Small Main Page Styling ========*/
-#lessonlist {
-    font-weight: bold;
-    font-size: 1.2em;
-    color: rgb(54, 129, 84);
-}
-
-#lessonlist > ul {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 2rem;
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.portalLI {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border-bottom: 1px solid black;
-    margin-bottom: 1rem;
-    width: 45%;
-}
-
-iframe {
-    box-shadow: 0 0 5px rgba(50, 50, 50, 0.8);
-    border-radius: 5px;
-    margin-top: 1rem;
-    width: 100%;
-    height: 500px;
-/*    width: 665px;*/
-}
-
-.portalLI > section {
-    width: 650px;
-    /*overflow: hidden;*/
-}
-
 #codepenPic[src] {
     width: 100%;
 }
@@ -279,12 +240,60 @@ a:hover,
     font-size: 1rem
 }
 
+#lessonlist {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: rgb(54, 129, 84);
+}
+
+#lessonlist > ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2rem;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.portalLI {
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin-bottom: 1rem;
+    gap: 2rem;
+}
+
+.portalLI > a {
+    width: fit-content;
+}
+
+iframe {
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.8);
+    border-radius: 5px;
+    margin-top: 1rem;
+    width: 100%;
+    height: 500px;
+    /*    width: 665px;*/
+}
+
+.portalLI > section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 650px;
+    /*overflow: hidden;*/
+}
+
+.project-items-list {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    list-style-type: none;
+}
+
 /*========= End of Small Projects Page Styling ========*/
-
-
-
 /*========= Start of Small Footer Styling ========*/
-
 footer > p > a {
     color: rgb(90, 209, 138);
 }
