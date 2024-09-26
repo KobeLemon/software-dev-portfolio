@@ -1,25 +1,126 @@
-﻿<!-- Create a list of projects from a Dictionary -->
+@* Buttons for sorting *@
+<section id="sort-section">
 
-@foreach(var item in portfolioLinksList)
-{
-    <ProjectItem portfolioLink="@item.Key" description="@item.Value"></ProjectItem>
-}
+    <label class="sort-label">Sort by: </label>
+
+    <section class="sort-btn-box">
+
+        <section class="sort-btn-individual">
+            <input 
+                type="radio" 
+                id="default" 
+                class="sort-btn" 
+                name="default" 
+                value="default" 
+                @onclick='() => SortProject("default")'>
+            <label for="default">Default</label>
+        </section>
+
+        <section class="sort-btn-individual">
+            <input 
+                type="radio" 
+                id="nameAsc" 
+                class="sort-btn" 
+                name="sort-type" 
+                value="nameAsc" 
+                @onclick='() => SortProject("nameAsc")'>
+            <label for="nameAsc">A-Z</label>
+        </section>
+
+        <section class="sort-btn-individual">
+            <input 
+                type="radio" 
+                id="nameDesc" 
+                class="sort-btn" 
+                name="sort-type" 
+                value="nameDesc" 
+                @onclick='() => SortProject("nameDesc")'>
+            <label for="nameDesc">Z-A</label>
+        </section>
+
+        <section class="sort-btn-individual">
+            <input 
+                type="radio" 
+                id="language" 
+                class="sort-btn" 
+                name="sort-type" 
+                value="language" 
+                @onclick='() => SortProject("language")'>
+            <label for="language">Language</label>
+        </section>
+
+    </section>
+
+</section>
+
+<hr />
+
+@* Display sorted project items *@
+<ul>
+    @foreach (var item in SortedProjectItems)
+    {
+        <ProjectItemComponent Link="@item.Link"
+            Description="@item.Description"
+            Name="@item.Name"
+        ></ProjectItemComponent>
+    }
+</ul>
 
 @code {
-    // Key: portfolio item's link to Demo
-    // Value: portfolio item's description
-    Dictionary<string, string> portfolioLinksList = new Dictionary<string, string>
+    private List<ProjectItem> ProjectItems = new List<ProjectItem>
     {
-        // Geolocator App
-        {
-            "https://kobelemon.github.io/geolocator-app/", 
-            "Description of Geolocator goes here"
+        new ProjectItem {
+            Name = "Where Am I? - Geolocator & Weather",
+            Link = "https://kobelemon.github.io/geolocator-app/",
+            Description="Description of Geolocator goes here",
+            Language = "HTML/CSS/JavaScript"
         },
-        // Star Wars API Demo App
-        {
-            "https://kobelemon.github.io/swapi-demo-app/", 
-            "Description of Swapi Demo App goes here"
-        }
+        new ProjectItem {
+            Name = "Star Wars API - Demo App",
+            Link = "https://kobelemon.github.io/swapi-demo-app/",
+            Description="Description of Swapi Demo App goes here",
+            Language = "HTML/CSS/JavaScript"
+        },
     };
 
+    private List<ProjectItem>? SortedProjectItems;
+
+    protected override void OnInitialized()
+    {
+        SortedProjectItems = ProjectItems;
+    }
+
+    private void SortProject(string sortBy)
+    {
+        switch (sortBy)
+        {
+            case "nameAsc":
+                SortedProjectItems = ProjectItems.OrderBy(p => p.Name).ToList();
+                break;
+
+            case "nameDesc":
+                SortedProjectItems = ProjectItems.OrderByDescending(p => p.Name).ToList();
+                break;
+
+            case "language":
+                SortedProjectItems = ProjectItems.OrderBy(p => p.Language).ToList();
+                break;
+
+            default:
+                SortedProjectItems = ProjectItems;
+                break;
+        }
+    }
+
+    public class ProjectItem
+    {
+        public string? Name { get; set; }
+
+        public string? Link { get; set; }
+
+        public string? Description { get; set; }
+
+        public string? Language { get; set; }
+    }
 }
+

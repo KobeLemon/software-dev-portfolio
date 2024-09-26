@@ -25,6 +25,11 @@ h1 {
     margin: 1rem;
 }
 
+.contentTitle {
+    text-align: center;
+    font-size: 2rem;
+}
+
 p, a {
     font-family: "Noto Sans", "PT Sans", sans-serif;
     letter-spacing: 1px;
@@ -164,7 +169,7 @@ nav {
     color: rgb(54, 129, 84);
 }
 
-#lessonlist ul {
+#lessonlist > ul {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -185,9 +190,15 @@ nav {
 }
 
 iframe {
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.8);
+    border-radius: 5px;
     margin-top: 1rem;
     width: 100%;
     height: 500px;
+}
+
+.portalLI > section {
+    width: 100%;
 }
 
 #codepenPic[src] {
@@ -196,13 +207,16 @@ iframe {
 
 a {
     padding: 5px;
+    transition: 0.3s ease;
 }
 
-a:hover {
+a:hover,
+.sort-btn-individual:hover {
     background-color: rgb(54, 129, 84);
     box-shadow: 0 0 5px rgba(50, 50, 50, 0.8);
     border-radius: 5px;
     color: white;
+    transform: scale(1.10);
 }
 
 #backToTopBtn {
@@ -215,12 +229,46 @@ a:hover {
     font-size: 1.25rem;
     font-weight: 600;
 }
-
 /*========= End of Small Main Page Styling ========*/
 
 
 
-/*========= Start of Small Footer Page Styling ========*/
+/*========= Start of Small Projects Page Styling ========*/
+#sort-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sort-label {
+    font-size: 1.25rem;
+}
+
+.sort-btn-box {
+    display: flex;
+    gap: 1rem;
+}
+
+.sort-btn-individual {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem;
+    transition: 0.3s ease;
+}
+
+.sort-btn {
+    color: rgb(0, 0, 108);
+    border-radius: 5px;
+    margin: 0rem;
+    font-size: 1rem
+}
+
+/*========= End of Small Projects Page Styling ========*/
+
+
+
+/*========= Start of Small Footer Styling ========*/
 
 footer > p > a {
     color: rgb(90, 209, 138);
@@ -241,7 +289,7 @@ footer {
     bottom: 0;
 }
 
-/*========= End of Small Footer Page Styling ========*/
+/*========= End of Small Footer Styling ========*/
 
 /* ******************************************************************* */
 /* **************** END OF SMALL (PHONE) VIEW STYLING **************** */

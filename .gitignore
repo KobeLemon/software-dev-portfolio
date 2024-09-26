@@ -4,6 +4,6 @@
 
 .github
 
-/bin/Debug
+bin/*
 
-/obj/Debug
+obj/*
