@@ -1,0 +1,197 @@
+﻿@* Page Title *@
+<h3 class="contentTitle">My Projects @title</h3>
+
+@* Buttons for sorting *@
+<section id="sort-section">
+
+    <label class="sort-label">Sort by: </label>
+
+    <section class="sort-btn-box">
+
+        @* Default *@
+        <section class="sort-btn-individual">
+            <input type="radio"
+                   id="default"
+                   class="sort-btn"
+                   value="default"
+                   @onchange="SortProjects"
+                   checked="@isDefault">
+            <label for="default">Default</label>
+        </section>
+
+        @* A-Z *@
+        <section class="sort-btn-individual">
+            <input type="radio"
+                   id="nameAsc"
+                   class="sort-btn"
+                   value="nameAsc"
+                   @onchange="SortProjects"
+                   checked="@isNameAsc">
+            <label for="nameAsc">A-Z</label>
+        </section>
+
+        @* Z-A *@
+        <section class="sort-btn-individual">
+            <input type="radio"
+                   id="nameDesc"
+                   class="sort-btn"
+                   value="nameDesc"
+                   @onchange="SortProjects"
+                   checked="@isNameDesc">
+            <label for="nameDesc">Z-A</label>
+        </section>
+
+        @* Language -- NOT WORKING AT THE MOMENT *@
+        @* <section class="sort-btn-individual">
+        <label for="languages">Language</label>
+        <select id="languages" multiple @bind="@SelectedLanguages">
+        @foreach (var language in AvailableLanguages)
+        {
+        <option value="@language">@language</option>
+        }
+        </select>
+        </section> *@
+    </section>
+</section>
+
+<hr />
+
+@* This is where all of the projects are inserted *@
+@* Display sorted project items *@
+<ul class="project-items-list">
+    @foreach (var item in FilteredProjectItems)
+    {
+        <ProjectItemComponent Link="@item.Link"
+                              Description="@item.Description"
+                              Name="@item.Name">
+        </ProjectItemComponent>
+    }
+
+</ul>
+
+@code {
+    // Default Title is blank
+    public string? title;
+
+    private List<ProjectItem>? ProjectItems = new List<ProjectItem>
+    {
+        new ProjectItem {
+            Name = "Where Am I? - Geolocator & Weather",
+            Link = "https://kobelemon.github.io/geolocator-app/",
+            Description="Description of Geolocator goes here",
+            Language = "HTML/CSS/JavaScript"
+        },
+        new ProjectItem {
+            Name = "Star Wars API - Demo App",
+            Link = "https://kobelemon.github.io/swapi-demo-app/",
+            Description="Description of Swapi Demo App goes here",
+            Language = "HTML/CSS/JavaScript"
+        },
+        new ProjectItem {
+            Name = "Bountiful Foods - Mock Website",
+            Link = "/projects/bountiful-foods/index.html",
+            Description="Description of Bountiful Foods goes here",
+            Language = "HTML/CSS/JavaScript"
+        },
+        new ProjectItem {
+            Name = "Chamber of Commerce - Mock Website",
+            Link = "/projects/chamber/index.html",
+            Description="Description of Chamber goes here",
+            Language = "HTML/CSS/JavaScript"
+        },
+        new ProjectItem {
+            Name = "Custom List Maker",
+            Link = "/projects/list-maker/index.html",
+            Description="Description of List-maker goes here",
+            Language = "HTML/CSS/JavaScript"
+        },
+        new ProjectItem {
+            Name = "CSS Keyframes Presentation",
+            Link = "/projects/keyframes-presentation/index.html",
+            Description="Description of keyframes-presentation goes here",
+            Language = "HTML/CSS/JavaScript"
+        },
+    };
+
+    private List<ProjectItem>? FilteredProjectItems = new List<ProjectItem>();
+
+    private List<string> SelectedLanguages = new List<string>();
+
+    private List<string>? AvailableLanguages = new List<string> { "HTML", "CSS", "JavaScript", "C#", "Blazor", "Python" };
+
+    private string? currentSort;
+
+    protected override void OnInitialized()
+    {
+        FilteredProjectItems = ProjectItems;
+        currentSort = "default"; // Default sorting
+    }
+
+    private void SortProjects(ChangeEventArgs e)
+    {
+        currentSort = e.Value.ToString(); // Capture the selected sorting option
+        SortItems();
+    }
+
+    private void SortItems()
+    {
+        switch (currentSort)
+        {
+            case "nameAsc":
+                title = "- A-Z";
+                FilteredProjectItems = FilteredProjectItems?.OrderBy(p => p.Name).ToList();
+                break;
+
+            case "nameDesc":
+                title = "- Z-A";
+                FilteredProjectItems = FilteredProjectItems?.OrderByDescending(p => p.Name).ToList();
+                break;
+
+            default:
+                title = "";
+                FilteredProjectItems = FilteredProjectItems;
+                break;
+        }
+    }
+
+    private void FilterItems()
+    {
+        if (SelectedLanguages.Count > 0)
+        {
+            FilteredProjectItems = ProjectItems
+                .Where(p => SelectedLanguages.Contains(p.Language))
+                .ToList();
+        }
+        else
+        {
+            FilteredProjectItems = ProjectItems; // Reset to all items if no language is selected
+        }
+
+        // Sort again after filtering to maintain the current sort order
+        SortItems();
+    }
+
+    // Trigger filter when selected languages change
+    private void OnSelectedLanguagesChanged()
+    {
+        FilterItems();
+    }
+
+    // Properties to track which sorting option is selected
+    private bool isDefault => currentSort?.ToLower() == "default";
+    private bool isNameAsc => currentSort?.ToLower() == "nameasc";
+    private bool isNameDesc => currentSort?.ToLower() == "namedesc";
+    private bool isLanguage => currentSort?.ToLower() == "language";
+
+    public class ProjectItem
+    {
+        public string? Name { get; set; }
+
+        public string? Link { get; set; }
+
+        public string? Description { get; set; }
+
+        public string? Language { get; set; }
+    }
+}
+
