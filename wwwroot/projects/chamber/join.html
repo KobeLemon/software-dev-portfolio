@@ -23,23 +23,24 @@
 
 </head>
 <body>
-<!-- Chamber Meeting Banner -->
+    <!-- Chamber Meeting Banner -->
     <h2 id="chamberMeetingBanner">🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</h2>
+    <p class="filler-notice">All data here is filler stock data. Any similarities to real life is coincidental.</p>
 
-<!-- HEADER -->
-	<header>
+    <!-- HEADER -->
+    <header>
         <a class="headerLogoBox" href="./index.html">
             <img class="headerLogo hoverZoom" src="./images/chamber_logo176.webp" alt="Chamber's Logo. It shows line art of three people in front of a building, both inside a target, all inside another circle.">
         </a>
         <div class="headerBox">
             <h1 class="chamberTitle">Syracuse City <br>Chamber of Commerce</h1>
-    <!-- Social Media Links -->
+            <!-- Social Media Links -->
             <figure class="socialMediaLinks">
                 <a href="https://www.facebook.com/" target="_blank"><img class="socialLogo hoverZoom" src="images/facebook_logo.webp" alt="Link to our Facebook"></a>
                 <a href="https://www.linkedin.com/" target="_blank"><img class="socialLogo hoverZoom" src="images/linkedin_logo.webp" alt="Link to our LinkedIn"></a>
             </figure>
             <div id="currentDate"></div>
-    <!-- Navigation -->
+            <!-- Navigation -->
             <nav id="navbar">
                 <button id="hamburgerBtn">
                     <!-- Hamburger Open Menu Icon -->
@@ -58,45 +59,52 @@
         </div>
     </header>
 
-<!-- MAIN CONTENT -->
+    <!-- MAIN CONTENT -->
     <main id="joinPage">
         <h2 class="joinTitle">Membership Application Form</h2>
-    <!-- Join Form -->
+        <!-- Join Form -->
         <form method="get" action="thankyou.html" class="joinForm">
-            <div class="applicantInfo">    
+            <div class="applicantInfo">
                 <h3 class="applicantTitle">Applicant Information</h3>
                 <p id="requiredSubtitle"><em>* indicates required field</em></p>
                 <!-- First Name -->
-                <label for="fname">First Name*
+                <label for="fname">
+                    First Name*
                     <input type="text" class="inputWidth" id="fname" name="fname" required>
                 </label>
                 <!-- Last Name -->
-                <label for="lname">Last Name*
+                <label for="lname">
+                    Last Name*
                     <input type="text" class="inputWidth" id="lname" name="lname" required>
                 </label>
                 <!-- Email -->
-                <label for="email">Email*
+                <label for="email">
+                    Email*
                     <input type="email" class="inputWidth" id="email" name="email" placeholder="youremail@domain.com" required>
                 </label>
                 <!-- Phone -->
-                <label for="phone">Phone Number*
+                <label for="phone">
+                    Phone Number*
                     <input type="tel" class="inputWidth" id="phone" name="phone" required>
                 </label>
                 <!-- Job Title -->
-                <label for="jobTitle">Job Title
+                <label for="jobTitle">
+                    Job Title
                     <input type="text" class="inputWidth" id="jobTitle" name="jobTitle" pattern="[a-zA-Z\s\-]{7,}">
                 </label>
             </div>
-    <!-- Business Info & Membership Options -->
+            <!-- Business Info & Membership Options -->
             <div class="membership">
                 <h3>Business Information</h3>
                 <div class="businessInfo">
                     <!-- Business Name -->
-                    <label for="businessName">Business Name*
+                    <label for="businessName">
+                        Business Name*
                         <input type="text" class="inputWidth" id="businessName" name="businessName" required>
-                    </label >
+                    </label>
                     <!-- Business Description -->
-                    <label for="businessDescription">Short Business Description <span id="desExample">ex. Automotive Repair Shop<br>ex. Vietnamese Fine Dining</span>
+                    <label for="businessDescription">
+                        Short Business Description <span id="desExample">ex. Automotive Repair Shop<br>ex. Vietnamese Fine Dining</span>
                         <textarea name="businessDescription" class="inputWidth" id="businessDescription" cols="30" rows="10"></textarea>
                     </label>
                 </div>
@@ -122,54 +130,59 @@
                     Non-Profit Membership | No fee
                 </label>
             </div>
-    <!-- Submit -->
+            <!-- Submit -->
             <input type="submit" id="submit" class="hoverZoom" value="Submit my Application">
             <input type="hidden" name="hiddenDate" id="hiddenDate" value="">
         </form>
         <div class="membershipBenefits">
             <h3>Membership Benefits</h3>
             <ul>
-                <li>Bronze Membership:<br>
-                $9.99/mth | Event discounts, consultation discounts, and advertisement on a single page.
+                <li>
+                    Bronze Membership:<br>
+                    $9.99/mth | Event discounts, consultation discounts, and advertisement on a single page.
                 </li>
-                <li>Silver Membership:<br>
-                $19.99/mth | All Bronze Benefits, plus advertising in two subpages of the website
+                <li>
+                    Silver Membership:<br>
+                    $19.99/mth | All Bronze Benefits, plus advertising in two subpages of the website
                 </li>
-                <li>Gold Membership:<br>
-                $29.99/mth | All Silver Benefits, plus priority advertising on the homepage
+                <li>
+                    Gold Membership:<br>
+                    $29.99/mth | All Silver Benefits, plus priority advertising on the homepage
                 </li>
-                <li>Non-Profit Membership:<br>
-                No Fee | All Gold Benefits. Only available for Non-Profit organizations.
+                <li>
+                    Non-Profit Membership:<br>
+                    No Fee | All Gold Benefits. Only available for Non-Profit organizations.
                 </li>
             </ul>
         </div>
     </main>
 
-<!-- FOOTER -->
-<footer>
-    <figure>
-        <a href="./index.html"><img class="footerLogo hoverZoom" src="./images/chamber_logo176.webp" alt="Chamber's Logo. It shows line art of three people in front of a building, both inside a target, all inside another circle."></a>
-    </figure>
-    <div class="footerBox1">
-        <div class="footerTitle">
-            <h2>Syracuse City Chamber of Commerce</h2>
+    <!-- FOOTER -->
+    <footer>
+        <figure>
+            <a href="./index.html"><img class="footerLogo hoverZoom" src="./images/chamber_logo176.webp" alt="Chamber's Logo. It shows line art of three people in front of a building, both inside a target, all inside another circle."></a>
+        </figure>
+        <div class="footerBox1">
+            <div class="footerTitle">
+                <h2>Syracuse City Chamber of Commerce</h2>
+            </div>
+            <h2 class="chamberAddress">
+                123 Main St.
+                Syracuse, UT 84075
+            </h2>
         </div>
-        <h2 class="chamberAddress">123 Main St.
-            Syracuse, UT 84075
-        </h2>
-    </div>
-    <div class="footerBox2">
-        <h2 class="chamberEmail hoverZoom">✉ info@cusecham.org</h2>
-        <h2 class="chamberPhone hoverZoom">☏ (123) 456-7890</h2>
-        <a href="https://www.google.com/maps/place/Syracuse,+UT/@41.0948008,-112.1278491,11.82z/data=!4m5!3m4!1s0x8752fd0925f39bdd:0x66de35e949280ee1!8m2!3d41.0893878!4d-112.0646657?hl=en" target="_blank">
-            <img src="images/map_picture.webp" alt="Link to Map Directions" class="hoverZoom map">
-        </a>
-    </div>
-    <hr>
-    <h2>2023 | Kobe Lemon | WDD 230 |</h2>
-</footer>
+        <div class="footerBox2">
+            <h2 class="chamberEmail hoverZoom">✉ info@cusecham.org</h2>
+            <h2 class="chamberPhone hoverZoom">☏ (123) 456-7890</h2>
+            <a href="https://www.google.com/maps/place/Syracuse,+UT/@41.0948008,-112.1278491,11.82z/data=!4m5!3m4!1s0x8752fd0925f39bdd:0x66de35e949280ee1!8m2!3d41.0893878!4d-112.0646657?hl=en" target="_blank">
+                <img src="images/map_picture.webp" alt="Link to Map Directions" class="hoverZoom map">
+            </a>
+        </div>
+        <hr>
+        <h2>2023 | Kobe Lemon | WDD 230 |</h2>
+    </footer>
 
-<!-- JavaScript Sources -->
-<script src="scripts/scripts.js"></script>
+    <!-- JavaScript Sources -->
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>

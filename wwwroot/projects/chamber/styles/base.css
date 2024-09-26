@@ -13,6 +13,12 @@ main {
     margin: auto;
 }
 
+.filler-notice {
+    margin: 1px;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
 /* Base Styling of the Header and its descendants */
 header {
     display: flex;
