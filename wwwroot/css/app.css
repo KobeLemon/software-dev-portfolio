@@ -100,7 +100,14 @@ header {
     box-shadow: 0 0 15px rgba(50, 50, 50, 0.8);
     padding: 5px;
     align-items: center;
+    justify-content: center;
+    gap: 1rem;
     text-align: center;
+    width: 100%;
+}
+
+.content {
+    width: 95%;
 }
 
 .homeSocialMediaLinks,
@@ -124,6 +131,7 @@ header {
 .profileBox {
     display: flex;
     align-items: center;
+    width: fit-content;
 }
 
 #profilepic {
@@ -259,6 +267,7 @@ a:hover,
 .portalLI {
     text-align: center;
     border-bottom: 1px solid black;
+    padding-bottom: 2rem;
     margin-bottom: 1rem;
     gap: 2rem;
 }
@@ -273,15 +282,6 @@ iframe {
     margin-top: 1rem;
     width: 100%;
     height: 500px;
-    /*    width: 665px;*/
-}
-
-.portalLI > section {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    max-width: 650px;
-    /*overflow: hidden;*/
 }
 
 .project-items-list {
@@ -331,8 +331,13 @@ footer {
     /*========= End of Medium General Page Styling ========*/
 
     /*========= Start of Medium Header Styling ========*/
-    header {
-        paramnamehere: ValueHere;
+
+    #name {
+        font-size: 2rem;
+    }
+
+    #profilepic {
+        width: 150px;
     }
 
     /*========= Start of Medium Nav Styling ========*/
@@ -350,11 +355,18 @@ footer {
     }
     /*========= End of Medium Main Page Styling ========*/
 
-    /*========= Start of Medium FillerPageHere Page Styling ========*/
-    ItemHere {
-        paramnamehere: ValueHere;
+    /*========= Start of Medium Projects Page Styling ========*/
+    .portalLI > section {
+        display: flex;
+        gap: 2rem;
+        width: 100%;
+        align-items: center;
     }
-    /*========= End of Medium FillerPageHere Page Styling ========*/
+
+    .portalLI * {
+        width: 45%;
+    }
+    /*========= End of Medium Projects Page Styling ========*/
 }
 /* End of Medium media query */
 
@@ -392,11 +404,11 @@ footer {
     }
     /*========= End of Large Main Page Styling ========*/
 
-    /*========= Start of Large FillerPageHere Page Styling ========*/
+    /*========= Start of Large Projects Page Styling ========*/
     ItemHere {
         paramnamehere: ValueHere;
     }
-    /*========= End of Large FillerPageHere Page Styling ========*/
+    /*========= End of Large Projects Page Styling ========*/
 }
 /* End of Large media query */
 

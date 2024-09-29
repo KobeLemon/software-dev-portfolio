@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Portfolio - About Me</title>
+    <title>Kobe's Portfolio</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
@@ -25,18 +25,5 @@
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
 </body>
-
-<script>
-    function disableIframeInteraction() {
-        const iframe = document.getElementById("snapshotFrame");
-        if (iframe) {
-            // Try to disable interaction with the iframe by setting CSS properties
-            iframe.contentWindow.document.body.style.pointerEvents = 'none';
-            iframe.contentWindow.document.body.style.userSelect = 'none';
-            iframe.contentWindow.document.body.style.overflow = 'hidden'; // Disable scroll
-            iframe.contentWindow.document.body.setAttribute('unselectable', 'on'); // Ensure text can't be selected
-        }
-    }
-</script>
 
 </html>
