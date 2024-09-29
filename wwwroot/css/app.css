@@ -13,7 +13,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 120px;
+    padding-bottom: 50px;
+    /*width: 90%;*/
 }
 
 h1, h2 {
@@ -25,6 +26,11 @@ h1 {
     margin: 1rem;
 }
 
+.contentTitle {
+    text-align: center;
+    font-size: 2rem;
+}
+
 p, a {
     font-family: "Noto Sans", "PT Sans", sans-serif;
     letter-spacing: 1px;
@@ -32,7 +38,7 @@ p, a {
 
 a, .btn-link {
     color: #0071c1;
-    text-decoration: none;
+    /*text-decoration: none;*/
 }
 
 .btn-primary {
@@ -94,19 +100,38 @@ header {
     box-shadow: 0 0 15px rgba(50, 50, 50, 0.8);
     padding: 5px;
     align-items: center;
+    justify-content: center;
+    gap: 1rem;
     text-align: center;
+    width: 100%;
 }
 
-.homeSocialMediaLinks {
+.content {
+    width: 95%;
+}
+
+.homeSocialMediaLinks,
+.header-link {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     color: rgb(90, 209, 138);
 }
 
+.homeSocialMediaLinks,
+.header-link,
+.nav-link {
+    text-decoration: none;
+}
+
+.header-link {
+    font-size: 1.25rem
+}
+
 .profileBox {
     display: flex;
     align-items: center;
+    width: fit-content;
 }
 
 #profilepic {
@@ -144,8 +169,10 @@ nav {
 
 .nav-link {
     display: flex;
-    align-items: center;
+/*    align-items: center;*/
     color: rgb(90, 209, 138);
+    height: fit-content;
+    gap: 0.3rem;
 }
 
 #nav-projects-item {
@@ -158,51 +185,22 @@ nav {
 
 
 /*========= Start of Small Main Page Styling ========*/
-#lessonlist {
-    font-weight: bold;
-    font-size: 1.2em;
-    color: rgb(54, 129, 84);
-}
-
-#lessonlist ul {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 2rem;
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.portalLI {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border-bottom: 1px solid black;
-    margin-bottom: 1rem;
-    width: 45%;
-}
-
-.portalLI iframe {
-    margin-top: 1rem;
-    width: 100%;
-    height: 500px;
-}
-
 #codepenPic[src] {
     width: 100%;
 }
 
 a {
     padding: 5px;
+    transition: 0.3s ease;
 }
 
-a:hover {
+a:hover,
+.sort-btn-individual:hover {
     background-color: rgb(54, 129, 84);
     box-shadow: 0 0 5px rgba(50, 50, 50, 0.8);
     border-radius: 5px;
     color: white;
+    transform: scale(1.10);
 }
 
 #backToTopBtn {
@@ -215,13 +213,87 @@ a:hover {
     font-size: 1.25rem;
     font-weight: 600;
 }
-
 /*========= End of Small Main Page Styling ========*/
 
 
 
-/*========= Start of Small Footer Page Styling ========*/
+/*========= Start of Small Projects Page Styling ========*/
+#sort-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 
+.sort-label {
+    font-size: 1.25rem;
+}
+
+.sort-btn-box {
+    display: flex;
+    gap: 1rem;
+}
+
+.sort-btn-individual {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem;
+    transition: 0.3s ease;
+}
+
+.sort-btn {
+    color: rgb(0, 0, 108);
+    border-radius: 5px;
+    margin: 0rem;
+    font-size: 1rem
+}
+
+#lessonlist {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: rgb(54, 129, 84);
+}
+
+#lessonlist > ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2rem;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.portalLI {
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+    gap: 2rem;
+}
+
+.portalLI > a {
+    width: fit-content;
+}
+
+iframe {
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.8);
+    border-radius: 5px;
+    margin-top: 1rem;
+    width: 100%;
+    height: 500px;
+}
+
+.project-items-list {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    list-style-type: none;
+}
+
+/*========= End of Small Projects Page Styling ========*/
+/*========= Start of Small Footer Styling ========*/
 footer > p > a {
     color: rgb(90, 209, 138);
 }
@@ -241,7 +313,7 @@ footer {
     bottom: 0;
 }
 
-/*========= End of Small Footer Page Styling ========*/
+/*========= End of Small Footer Styling ========*/
 
 /* ******************************************************************* */
 /* **************** END OF SMALL (PHONE) VIEW STYLING **************** */
@@ -259,8 +331,13 @@ footer {
     /*========= End of Medium General Page Styling ========*/
 
     /*========= Start of Medium Header Styling ========*/
-    header {
-        paramnamehere: ValueHere;
+
+    #name {
+        font-size: 2rem;
+    }
+
+    #profilepic {
+        width: 150px;
     }
 
     /*========= Start of Medium Nav Styling ========*/
@@ -278,11 +355,18 @@ footer {
     }
     /*========= End of Medium Main Page Styling ========*/
 
-    /*========= Start of Medium FillerPageHere Page Styling ========*/
-    ItemHere {
-        paramnamehere: ValueHere;
+    /*========= Start of Medium Projects Page Styling ========*/
+    .portalLI > section {
+        display: flex;
+        gap: 2rem;
+        width: 100%;
+        align-items: center;
     }
-    /*========= End of Medium FillerPageHere Page Styling ========*/
+
+    .portalLI * {
+        width: 45%;
+    }
+    /*========= End of Medium Projects Page Styling ========*/
 }
 /* End of Medium media query */
 
@@ -320,11 +404,11 @@ footer {
     }
     /*========= End of Large Main Page Styling ========*/
 
-    /*========= Start of Large FillerPageHere Page Styling ========*/
+    /*========= Start of Large Projects Page Styling ========*/
     ItemHere {
         paramnamehere: ValueHere;
     }
-    /*========= End of Large FillerPageHere Page Styling ========*/
+    /*========= End of Large Projects Page Styling ========*/
 }
 /* End of Large media query */
 

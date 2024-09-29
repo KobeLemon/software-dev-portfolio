@@ -11,4 +11,12 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.30" PrivateAssets="all" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\projects\" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <NoWarn>10012</NoWarn>
+  </PropertyGroup>
+
 </Project>
