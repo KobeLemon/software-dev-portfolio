@@ -4,4 +4,6 @@
 
 .github
 
-/obj
+bin/*
+
+obj/*
