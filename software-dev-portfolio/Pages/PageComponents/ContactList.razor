@@ -1,0 +1,67 @@
+﻿@using software_dev_portfolio.Pages.PageComponents;
+
+<ul class="project-items-list">
+    @foreach (var item in ContactsList)
+    {
+        <ContactItemComponent
+            Link = "@item.Link"
+            Description="@item.Description"
+            ImagePath="@item.ImagePath"
+            ImageAlt="@item.ImageAlt"
+            HasImage="@item.HasImage">
+        </ContactItemComponent>
+    }
+    <li style="text-align:center;"><a href="/projects">Back to Top</a></li>
+</ul>
+
+@code {
+    // Default Title is blank
+    public string? title;
+
+    private string? currentSort;
+
+    private List<ContactItem>? ContactsList = new List<ContactItem>
+    {
+        @* Email - no image*@
+        new ContactItem
+        {
+            Link="mailto:kobealemon@gmail.com",
+            Description="✉ kobealemon@gmail.com",
+            ImagePath="",
+            ImageAlt="",
+            HasImage=false
+        },
+        @* LinkedIn *@
+        new ContactItem
+        {
+            Link="https://www.linkedin.com/in/kobe-lemon",
+            Description="My LinkedIn Profile",
+            ImagePath="./images/linkedin-original.svg",
+            ImageAlt="LinkedIn Logo",
+            HasImage=true
+        },
+        @* GitHub *@
+        new ContactItem
+        {
+            Link="https://github.com/KobeLemon",
+            Description="My GitHub Profile",
+            ImagePath="./images/github-original.svg",
+            ImageAlt="GitHub Logo",
+            HasImage=true
+        },
+        
+    };
+
+    public class ContactItem
+    {
+        public string? Link { get; set; }
+
+        public string? Description { get; set; }
+
+        public string? ImagePath { get; set; }
+
+        public string? ImageAlt { get; set; }
+
+        public bool HasImage { get; set; }
+    }
+}
