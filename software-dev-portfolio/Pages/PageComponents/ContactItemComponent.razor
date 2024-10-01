@@ -1,0 +1,42 @@
+﻿@* If the contact item contains an image: *@
+@if (HasImage)
+{
+    <li>
+
+        <a class="header-link" target="_blank" href="@Link">
+
+            <img src="@ImagePath" alt="@ImageAlt">
+
+            <p>@Description</p>
+
+        </a>
+
+    </li>
+} 
+
+@* If the contact item does not contain an image: *@
+else
+{
+    <li>
+
+        <a class="header-link" target="_blank" href="@Link"><p>@Description</p></a>
+
+    </li>
+}
+
+@code {
+    [Parameter]
+    public string? Link { get; set; }
+
+    [Parameter]
+    public string? Description { get; set; }
+
+    [Parameter]
+    public string? ImagePath { get; set; }
+
+    [Parameter]
+    public string? ImageAlt { get; set; }
+
+    [Parameter]
+    public bool HasImage { get; set; }
+}
