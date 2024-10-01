@@ -1,6 +1,6 @@
 ﻿@using software_dev_portfolio.Pages.PageComponents;
 
-<ul class="project-items-list">
+<ul class="contact-items-list">
     @foreach (var item in ContactsList)
     {
         <ContactItemComponent
@@ -11,15 +11,10 @@
             HasImage="@item.HasImage">
         </ContactItemComponent>
     }
-    <li style="text-align:center;"><a href="/projects">Back to Top</a></li>
+    <li style="text-align:center;"><a href="/contact">Back to Top</a></li>
 </ul>
 
 @code {
-    // Default Title is blank
-    public string? title;
-
-    private string? currentSort;
-
     private List<ContactItem>? ContactsList = new List<ContactItem>
     {
         @* Email - no image*@

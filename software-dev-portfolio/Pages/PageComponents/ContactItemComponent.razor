@@ -1,13 +1,13 @@
 ﻿@* If the contact item contains an image: *@
 @if (HasImage)
 {
-    <li>
+    <li class="contactLI">
 
-        <a class="header-link" target="_blank" href="@Link">
+        <a class="contact-link" target="_blank" href="@Link">
 
             <img src="@ImagePath" alt="@ImageAlt">
 
-            <p>@Description</p>
+            @Description
 
         </a>
 
@@ -17,9 +17,13 @@
 @* If the contact item does not contain an image: *@
 else
 {
-    <li>
+    <li class="contactLI">
 
-        <a class="header-link" target="_blank" href="@Link"><p>@Description</p></a>
+        <a class="contact-link" target="_blank" href="@Link">
+        
+            @Description
+        
+        </a>
 
     </li>
 }
