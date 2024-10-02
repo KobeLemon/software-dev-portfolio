@@ -6,11 +6,11 @@ My name is Kobe Lemon and I am a Software Developer! This is my portfolio that s
 
 [Software Demo Video](YTVidLinkHere)
 
-[Portfolio Site - GitHub Pages](https://kobelemon.github.io/software-dev-portfolio/)
-
 ## Web Pages
 
-{Describe each of the web pages you created and how the web app transitions between each of them.  Also describe what is dynamically created on each page.}
+Home: The Home page gives a brief overview on who I am and how I have gotten to this point. It also explains the three main things I am currently learning.
+Projects: The Projects page is where several of my past projects are displayed for perusal.
+Contact Me: The Contact Me page contains my email & links to my LinkedIn & GitHub accounts so the user can contact me.
 
 ## Development Environment
 
@@ -24,6 +24,6 @@ My name is Kobe Lemon and I am a Software Developer! This is my portfolio that s
 
 ## Future Work
 
-- Item 1
-- Item 2
-- Item 3
+- I need to periodically update my projects with newer projects show I can show an accurate progression of my skill.
+- I need to work on changing the styling & usability of the site to make it more professional.
+- I am working on other projects that I mentioned in the "About Me" page so I need to add links to those projects once they are ready.
