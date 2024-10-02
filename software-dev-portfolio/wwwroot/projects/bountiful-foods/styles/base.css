@@ -16,7 +16,7 @@ main {
 header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: #DC7D7B;
+    background-color: #dc7d7b;
     color: white;
 }
 
@@ -48,7 +48,7 @@ header h1 {
 
 /* NavBar Base Styling */
 nav {
-    background-color: #1C4F6A;
+    background-color: #1c4f6a;
     color: white;
     grid-column: 1 / -1;
 }
@@ -72,7 +72,7 @@ nav ul li a {
 }
 
 #hamburgerBtn {
-    background-color: #1C4F6A;
+    background-color: #1c4f6a;
     color: white;
     border-radius: 0.5rem;
     height: 50px;
@@ -110,7 +110,7 @@ nav ul.open li {
 #hamburgerBtn.open span:nth-child(2) {
     display: block;
     padding: 0.3rem;
-    border-radius:0.5rem;
+    border-radius: 0.5rem;
 }
 
 #primaryNav.open {
@@ -128,9 +128,19 @@ nav ul.open li {
 /* End of Header Base Styling */
 
 /* Main Page Content Base Styling */
-p, a, li {font-family: 'Open Sans', sans-serif;}
-h1, h2 {font-family: 'IBM Plex Serif', serif; text-align: center;}
-.content {margin-bottom: 1rem;}
+p,
+a,
+li {
+    font-family: "Open Sans", sans-serif;
+}
+h1,
+h2 {
+    font-family: "IBM Plex Serif", serif;
+    text-align: center;
+}
+.content {
+    margin-bottom: 1rem;
+}
 
 .mainPage {
     margin-bottom: 3rem;
@@ -173,7 +183,7 @@ h1, h2 {font-family: 'IBM Plex Serif', serif; text-align: center;}
 .createBox a {
     text-decoration: none;
     font-size: 1.5rem;
-    background-color: #1C4F6A;
+    background-color: #1c4f6a;
     padding: 0.5rem;
     color: white;
     border-radius: 0.8rem;
@@ -185,7 +195,8 @@ h1, h2 {font-family: 'IBM Plex Serif', serif; text-align: center;}
 }
 
 /* Single Weather Tile Base Styling */
-.oneDayBox, .threeDayBox {
+.oneDayBox,
+.threeDayBox {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 1rem;
@@ -217,7 +228,9 @@ h1, h2 {font-family: 'IBM Plex Serif', serif; text-align: center;}
     height: 100px;
 }
 
-#threeDayIcon1, #threeDayIcon2, #threeDayIcon3 {
+#threeDayIcon1,
+#threeDayIcon2,
+#threeDayIcon3 {
     height: 85px;
 }
 
@@ -241,7 +254,10 @@ h1, h2 {font-family: 'IBM Plex Serif', serif; text-align: center;}
     padding: 1.5rem 0px;
 }
 
-label, textarea, #submit, input {
+label,
+textarea,
+#submit,
+input {
     max-width: 150px;
 }
 
@@ -251,7 +267,8 @@ label, textarea, #submit, input {
     height: fit-content;
 }
 
-input, textarea {
+input,
+textarea {
     border: 0.5px solid black;
     padding: 0.5rem;
     border-radius: 0.5rem;
@@ -269,18 +286,20 @@ input, textarea {
     border-radius: 0.5rem;
 }
 
-#recipeInfo, #nutritionInfo {
+#recipeInfo,
+#nutritionInfo {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#recipeInfo p, #nutritionInfo p {
+#recipeInfo p,
+#nutritionInfo p {
     background-color: white;
     padding: 0.5rem;
     border-radius: 0.5rem;
     width: fit-content;
-    border: 1px solid black
+    border: 1px solid black;
 }
 /* End of Fresh Page Base Styling */
 
@@ -304,7 +323,7 @@ input, textarea {
 
 /* Footer Base Styling */
 footer {
-    background-color: #DC7D7B;
+    background-color: #dc7d7b;
     padding: 0.8em;
     color: white;
     text-align: center;

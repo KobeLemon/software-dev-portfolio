@@ -1,11 +1,9 @@
 /* Laptop / Desktop Large Sizing */
 @media only screen and (min-width: 1028px) {
-
     /* Large Styling of the Header and its descendants */
 
     header * {
         margin: auto;
-        
     }
 
     .headerLogoBox {
@@ -35,7 +33,7 @@
         margin-top: 1rem;
         border-radius: 0.7rem;
     }
-    
+
     nav ul {
         display: flex;
     }
@@ -51,12 +49,12 @@
     #primaryNav {
         margin: 0rem;
     }
-    
+
     #currentDate {
         font-size: 1.5rem;
         width: fit-content;
     }
-    
+
     /* End of Header Large Styling */
 
     /* Main Content Large Styling */
@@ -70,7 +68,7 @@
 
     #heroBanner {
         grid-column: 2/4;
-        grid-row: 1/span 2;
+        grid-row: 1 / span 2;
     }
 
     #heroBanner h2 {
@@ -81,18 +79,19 @@
         display: block;
     }
 
-    #smallOverlay, #mediumOverlay {
+    #smallOverlay,
+    #mediumOverlay {
         display: none;
     }
 
     .events {
-        grid-column: 1/span 1;
-        grid-row: 1/span 1;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
     }
 
     .weather {
-        grid-column: 1/span 1;
-        grid-row: 2/span 1;
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
     }
 
     #temperature {
@@ -108,20 +107,20 @@
     }
 
     .join {
-        grid-column: 1/span 1;
-        grid-row: 3/span 1; 
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
     }
 
     .news {
-        grid-column: 2/span 2;
-        grid-row: 3/span 1;
+        grid-column: 2 / span 2;
+        grid-row: 3 / span 1;
     }
 
     #spotlightBox {
         flex-direction: column;
         gap: 1rem;
-        grid-column: 4/span 1;
-        grid-row: 1/span 3;
+        grid-column: 4 / span 1;
+        grid-row: 1 / span 3;
         height: 100%;
     }
 
@@ -137,22 +136,24 @@
     .spotlights * {
         margin-top: 1.5rem;
     }
-    
+
     /* End of Main Content Large Styling */
 
     /* Discover Page Large Styling */
-    .hoverZoom:hover, .cityInfoSource a:hover {
+    .hoverZoom:hover,
+    .cityInfoSource a:hover {
         transform: scale(1.1);
     }
-    
-    .hoverZoom, .cityInfoSource a {
+
+    .hoverZoom,
+    .cityInfoSource a {
         transition: 0.25s ease;
     }
     /* End of Discover Page Large Styling */
 
     /* Join Page Large Styling */
     .inputWidth {
-        width: 25rem
+        width: 25rem;
     }
     /* End of Join Page Large Styling */
 
@@ -166,7 +167,8 @@
         margin-left: 3rem;
     }
 
-    .contactBox1, .contactBox2 {
+    .contactBox1,
+    .contactBox2 {
         gap: 4.5rem;
         justify-content: center;
     }
@@ -209,11 +211,10 @@
         margin-right: auto;
         max-width: 20rem;
     }
-        
+
     .footerBox2 {
         margin-left: 3rem;
         margin-right: 10rem;
     }
     /* End of Footer Large Styling */
-
 }

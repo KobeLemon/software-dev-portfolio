@@ -1,6 +1,6 @@
 /* Start of General Styling */
 html {
-    background-color: rgb(255,255,240);  
+    background-color: rgb(255, 255, 240);
 }
 
 body {
@@ -61,7 +61,7 @@ iframe {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding-top: 1rem;
-    padding-bottom: 1rem;  
+    padding-bottom: 1rem;
 }
 
 .example {
@@ -84,8 +84,12 @@ iframe {
     animation-iteration-count: 3;
 }
 @keyframes basicAnimation {
-    0% {background-color: #247620;}
-    100% {background-color: black;}
+    0% {
+        background-color: #247620;
+    }
+    100% {
+        background-color: black;
+    }
 }
 
 /* Timing Keyframe */
@@ -120,8 +124,12 @@ iframe {
 }
 
 @keyframes timing {
-    0% {left: 0%;}
-    100% {left: 77%;}
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 77%;
+    }
 }
 
 /* Repeat Keyframe */
@@ -137,12 +145,15 @@ iframe {
 
 #repeatInfinite {
     animation-iteration-count: infinite;
-
 }
 
-@keyframes repeat{
-    0% {left: 0%;}
-    100% {left: 77%;}
+@keyframes repeat {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 77%;
+    }
 }
 
 /* Delay Keyframe */
@@ -162,8 +173,12 @@ iframe {
 }
 
 @keyframes delay {
-    0% {left: 0%;}
-    100% {left: 77%;}
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 77%;
+    }
 }
 
 /* Direction Keyframe */
@@ -194,8 +209,12 @@ iframe {
 }
 
 @keyframes direction {
-    0% {left: 0%;}
-    100% {left: 77%;}
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 77%;
+    }
 }
 
 /* Fill Mode Keyframe */
@@ -224,11 +243,26 @@ iframe {
 }
 
 @keyframes fillMode {
-    0% {left: 0%; background-color: aqua;}
-    25% {left: 20%; background-color: blueviolet;}
-    50% {left: 40%; background-color: brown;}
-    75% {left: 60%; background-color: burlywood;}
-    100% {left: 80%; background-color: crimson;}
+    0% {
+        left: 0%;
+        background-color: aqua;
+    }
+    25% {
+        left: 20%;
+        background-color: blueviolet;
+    }
+    50% {
+        left: 40%;
+        background-color: brown;
+    }
+    75% {
+        left: 60%;
+        background-color: burlywood;
+    }
+    100% {
+        left: 80%;
+        background-color: crimson;
+    }
 }
 
 /* Shorthand Keyframe */
@@ -245,7 +279,7 @@ iframe {
 
 .shorthand {
     /* Name Duration Timing Delay Repeat Direction Fill-Mode */
-    animation: shortlong 5s linear 2s 2 alternate backwards
+    animation: shortlong 5s linear 2s 2 alternate backwards;
 }
 
 .longhand {
@@ -267,7 +301,7 @@ iframe {
     20% {
         top: 100px;
         background-color: orange;
-        transform: scale(1.2) rotate(144deg); 
+        transform: scale(1.2) rotate(144deg);
     }
     40% {
         top: 0px;

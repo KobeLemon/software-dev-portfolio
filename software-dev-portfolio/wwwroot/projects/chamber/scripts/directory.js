@@ -12,23 +12,23 @@ const displayCompanies = (companies) => {
 
     companies.forEach((company) => {
         // this creates the container of each individual card
-        let card = document.createElement('section');
-        card.classList.add('directoryCard');
-        
+        let card = document.createElement("section");
+        card.classList.add("directoryCard");
+
         // These are the elements for the info about each company
-        let logo = document.createElement('img');
-        logo.classList.add('listNone');
-        let chamberRep = document.createElement('img');
-        chamberRep.classList.add('listNone')
-        let divider = document.createElement('hr');
-        divider.classList.add('listNone');
-        let companyName = document.createElement('h2');
-        let description = document.createElement('p');
-        let phone = document.createElement('p');
-        let email = document.createElement('p');
-        let address = document.createElement('p');
-        let website = document.createElement('p');
-        let membership = document.createElement('p');
+        let logo = document.createElement("img");
+        logo.classList.add("listNone");
+        let chamberRep = document.createElement("img");
+        chamberRep.classList.add("listNone");
+        let divider = document.createElement("hr");
+        divider.classList.add("listNone");
+        let companyName = document.createElement("h2");
+        let description = document.createElement("p");
+        let phone = document.createElement("p");
+        let email = document.createElement("p");
+        let address = document.createElement("p");
+        let website = document.createElement("p");
+        let membership = document.createElement("p");
 
         // Build the company card
         companyName.textContent = company.businessName;
@@ -40,21 +40,21 @@ const displayCompanies = (companies) => {
         membership.textContent = `${company.membership} Membership`;
 
         // Build the logo
-        logo.setAttribute('src', company.logo);
-        logo.setAttribute('alt', `Logo of ${company.businessName}`);
-        logo.setAttribute('loading', 'lazy');
-        logo.setAttribute('width', '150');
-        logo.setAttribute('height', '100');
+        logo.setAttribute("src", company.logo);
+        logo.setAttribute("alt", `Logo of ${company.businessName}`);
+        logo.setAttribute("loading", "lazy");
+        logo.setAttribute("width", "150");
+        logo.setAttribute("height", "100");
 
         // Build the chamber rep profile picture
-        chamberRep.setAttribute('src', company.chamberRep);
-        chamberRep.setAttribute('alt', `Picture of ${company.businessName}'s Chamber Representative: ${company.fname} ${company.lname}`);
-        chamberRep.setAttribute('loading', 'lazy');
-        chamberRep.setAttribute('width', '100');
-        chamberRep.setAttribute('height', '100');
+        chamberRep.setAttribute("src", company.chamberRep);
+        chamberRep.setAttribute("alt", `Picture of ${company.businessName}'s Chamber Representative: ${company.fname} ${company.lname}`);
+        chamberRep.setAttribute("loading", "lazy");
+        chamberRep.setAttribute("width", "100");
+        chamberRep.setAttribute("height", "100");
 
         // link the website url of each company
-        website.setAttribute('href', company.website);
+        website.setAttribute("href", company.website);
         // website.innerHTML(company.website)
 
         // Append the section(card) with the created elements
@@ -71,9 +71,8 @@ const displayCompanies = (companies) => {
 
         // Add each card to the cards div
         cards.appendChild(card);
-
     }); // end of companies.forEach loop
-} // end of displayCompanies function
+}; // end of displayCompanies function
 
 getCompanyData();
 
@@ -84,8 +83,7 @@ function changeLayout() {
     if (contentLayout.id == "gridLayout") {
         contentLayout.id = "listLayout";
         btnGridList.textContent = "Switch to Grid ⊞";
-    }
-    else {
+    } else {
         contentLayout.id = "gridLayout";
         btnGridList.textContent = "Switch to List 📄";
     }

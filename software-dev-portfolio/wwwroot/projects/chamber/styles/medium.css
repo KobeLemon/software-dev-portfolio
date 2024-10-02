@@ -20,7 +20,8 @@
         column-gap: 0.4rem;
     }
 
-    .cityName, .chamberName {
+    .cityName,
+    .chamberName {
         font-size: 1.5rem;
     }
 
@@ -50,12 +51,13 @@
         margin-top: 0rem;
         height: 100%;
     }
-    
+
     #mediumOverlay {
         display: block;
     }
 
-    #smallOverlay, #largeOverlay {
+    #smallOverlay,
+    #largeOverlay {
         display: none;
     }
 
@@ -108,7 +110,8 @@
         height: 400px;
     }
 
-    .cityInfoSource, .visitBox {
+    .cityInfoSource,
+    .visitBox {
         width: 600px;
     }
     /* End of Discover Page Medium Styling */
@@ -124,14 +127,15 @@
         margin-top: 15px;
     }
 
-    #listLayout .directoryCard h2, #listLayout .directoryCard p {
+    #listLayout .directoryCard h2,
+    #listLayout .directoryCard p {
         height: fit-content;
         border-left: 1px solid black;
         padding: 0.5rem;
         margin-right: 0px;
     }
     /* End of Directory Page Medium Styling */
-    
+
     /* Join Page Medium Styling */
     #joinPage {
         display: grid;
@@ -142,17 +146,17 @@
 
     .joinTitle {
         grid-column: 1/-1;
-        grid-row: 1/span 1;
+        grid-row: 1 / span 1;
         margin: 2rem auto;
     }
 
     .membershipBenefits {
-        grid-column: 2 /span 1;
-        grid-row: 2 /span 1;
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
     }
 
     .joinForm {
-        grid-row: 2/span 1;
+        grid-row: 2 / span 1;
     }
 
     .membership {
@@ -163,7 +167,8 @@
         margin-top: 2rem;
     }
 
-    .businessInfo label input, .businessInfo label textarea {
+    .businessInfo label input,
+    .businessInfo label textarea {
         margin-top: 0.75rem;
     }
 
@@ -172,10 +177,10 @@
         padding-left: 1rem;
         border-left: 1px solid black;
     }
-    
+
     #submit {
-        grid-column: 2/span 2;
-        grid-row: 2/span 1;
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 1;
     }
     /* End of Join Page Medium Styling */
 
@@ -185,7 +190,8 @@
         flex-direction: row;
     }
 
-    .contactBox1, .contactBox2 {
+    .contactBox1,
+    .contactBox2 {
         justify-content: start;
         column-gap: 3rem;
     }
@@ -196,7 +202,7 @@
         width: fit-content;
         width: 50%;
     }
-    
+
     #contactPage hr {
         position: absolute;
         transform: rotate(90deg);
@@ -204,20 +210,20 @@
         left: 240px;
         top: 525px;
     }
-    
+
     .indicateRequired {
         grid-column: 1/-1;
         font-size: 0.75rem;
     }
-    
+
     #message {
         margin: 1rem 0px;
         max-width: 91%;
     }
-    
+
     #contactPage form #submit {
         grid-column: 1/2;
-        grid-row: 6/span 1;
+        grid-row: 6 / span 1;
     }
 
     #contactPage hr {
