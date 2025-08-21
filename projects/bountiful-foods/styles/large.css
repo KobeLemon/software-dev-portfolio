@@ -1,6 +1,5 @@
 /* Laptop / Desktop Large Sizing */
 @media only screen and (min-width: 1000px) {
-
     /* Header Large Styling */
     .headerLogo {
         margin-bottom: 1rem;
@@ -27,16 +26,16 @@
 
     .weatherBox {
         flex-direction: row;
-        gap: 1rem
+        gap: 1rem;
     }
-    
+
     .threeDayBox {
         height: fit-content;
     }
 
     .threeDayBox {
         margin-top: 1.5rem;
-        height: 110px
+        height: 110px;
     }
     /* End of Main Page Large Styling */
 

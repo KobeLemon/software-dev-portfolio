@@ -1,7 +1,5 @@
 function activateExample(exampleJS, exampleClass) {
-    document.querySelectorAll(exampleJS).forEach(item =>
-        item.classList.toggle(exampleClass)
-    );
+    document.querySelectorAll(exampleJS).forEach((item) => item.classList.toggle(exampleClass));
 }
 
 function activateShortLong() {

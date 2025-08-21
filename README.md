@@ -1,11 +1,11 @@
 # Kobe's Software Development Portfolio
 
-- Table of Contents
-  - [Overview](#overview)
-  - [Web Pages](#web-pages)
-  - [Development Environment](#development-environment)
-  - [Useful Websites](#useful-websites)
-  - [Future Work](#future-work)
+-   Table of Contents
+    -   [Overview](#overview)
+    -   [Web Pages](#web-pages)
+    -   [Development Environment](#development-environment)
+    -   [Useful Websites](#useful-websites)
+    -   [Future Work](#future-work)
 
 ## Overview
 
@@ -21,15 +21,15 @@ My name is Kobe Lemon and I am a Software Developer! This is my portfolio that s
 
 ## Development Environment
 
-- **Code Editors**: Visual Studio Code & Visual Studio 2022
-- **Languages**: C#, Blazor, HTML, CSS, JavaScript.
+-   **Code Editors**: Visual Studio Code & Visual Studio 2022
+-   **Languages**: C#, Blazor, HTML, CSS, JavaScript.
 
 ## Useful Websites
 
-- [**MDN Web Docs**](https://developer.mozilla.org/en-US/)
-- [**W3 Schools**](https://www.w3schools.com/)
+-   [**MDN Web Docs**](https://developer.mozilla.org/en-US/)
+-   [**W3 Schools**](https://www.w3schools.com/)
 
 ## Future Work
 
-- I need to periodically update my projects with newer projects show I can show an accurate progression of my skill.
-- I am working on other projects that I mentioned in the "About Me" page so I need to add links to those projects once they are ready.
+-   I need to periodically update my projects with newer projects show I can show an accurate progression of my skill.
+-   I am working on other projects that I mentioned in the "About Me" page so I need to add links to those projects once they are ready.
