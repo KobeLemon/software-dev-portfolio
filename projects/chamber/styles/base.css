@@ -1,18 +1,12 @@
 /* Phone / Main Sizing */
 
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
-html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    background-color: rgb(255, 255, 240);
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; 
+    background-color: rgb(255,255,240);
 }
 
 /*----------- apply a natural box layout model to all elements --------------*/
-* {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 main {
     width: 99%;
@@ -89,7 +83,7 @@ nav ul {
 nav ul li {
     margin-top: 0.8rem;
     font-size: 2rem;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid rgba(0,0,0,0.3);
     padding-bottom: 0.8rem;
 }
 
@@ -99,7 +93,7 @@ nav ul li a {
 }
 
 #hamburgerBtn {
-    background-color: #1d5e19;
+    background-color: #1d5e19; 
     border-radius: 0.5rem;
     width: fit-content;
     margin-bottom: 0.5rem;
@@ -110,33 +104,20 @@ nav ul li a {
     margin-bottom: 0rem;
 }
 
-nav ul {
-    display: none;
-}
+nav ul {display: none;}
 
-nav ul.open {
-    display: block;
-}
+nav ul.open {display: block;}
 
-#hamburgerBtn span:nth-child(1) {
-    display: block;
-    color: whitesmoke;
-}
-#hamburgerBtn span:nth-child(2) {
-    display: none;
-    color: whitesmoke;
-}
+#hamburgerBtn span:nth-child(1) {display: block; color: whitesmoke;}
+#hamburgerBtn span:nth-child(2) {display: none; color: whitesmoke;}
 
-#hamburgerBtn.open span:nth-child(1) {
-    display: none;
-    color: whitesmoke;
-}
+#hamburgerBtn.open span:nth-child(1) {display: none; color: whitesmoke;}
 #hamburgerBtn.open span:nth-child(2) {
     display: block;
     color: whitesmoke;
     background-color: #247620;
     padding: 0.3rem;
-    border-radius: 0.5rem;
+    border-radius:0.5rem;
 }
 
 #navbar.open {
@@ -160,16 +141,8 @@ nav ul.open {
 /* End of Header Base Styling */
 
 /* Main Page Content Base Styling */
-p,
-a,
-li {
-    font-family: "Noto Sans", "PT Sans", sans-serif;
-    color: #033c92;
-}
-h1,
-h2 {
-    font-family: "Noto Serif", "PT Serif", serif;
-}
+p, a, li {font-family: 'Noto Sans', 'PT Sans', sans-serif; color: #033c92;}
+h1, h2 {font-family: 'Noto Serif', 'PT Serif', serif;}
 
 .content {
     margin-bottom: 1rem;
@@ -231,8 +204,7 @@ h2 {
     height: fit-content;
 }
 
-#mediumOverlay,
-#largeOverlay {
+#mediumOverlay, #largeOverlay {
     display: none;
 }
 /* End of Hero Banner Base Styling */
@@ -306,8 +278,7 @@ h2 {
     height: 3rem;
 }
 
-.joinDescription,
-.heroDescription {
+.joinDescription, .heroDescription {
     padding: 0 0.5rem 1rem 0.5rem;
 }
 
@@ -330,8 +301,7 @@ h2 {
 /* End of Join Tile Base Styling */
 
 /* News & Events Tiles Base Styling */
-.newsLink,
-.eventsLink {
+.newsLink, .eventsLink {
     color: whitesmoke;
     text-decoration: none;
     background-color: #247620;
@@ -395,25 +365,19 @@ h2 {
     font-size: 1.2rem;
 }
 
-.spotlightSiteLink,
-.spotlightPhoneNum,
-.spotlights hr {
+.spotlightSiteLink, .spotlightPhoneNum, .spotlights hr {
     font-size: 1rem;
     margin-top: 0px;
 }
 /* End of Spotlights Tiles Base Styling */
 
 /* Main Page Links Styling */
-nav ul li:hover,
-.joinLink:hover,
-.newsLink:hover,
-.eventsLink:hover,
-#submit:hover {
+nav ul li:hover, .joinLink:hover, .newsLink:hover, .eventsLink:hover, #submit:hover {
     background-color: #033c92;
     border-radius: 0.5rem;
 }
 
-.socialMediaLinks a:hover {
+.socialMediaLinks a:hover{
     background-color: #033c92;
     border-radius: 0.5rem;
 }
@@ -429,8 +393,7 @@ nav ul li:hover,
     margin-bottom: 2rem;
 }
 
-#discoverTitle,
-.directoryTitle {
+#discoverTitle, .directoryTitle {
     font-size: 3rem;
     color: #195216;
     text-align: center;
@@ -489,8 +452,7 @@ img {
     color: whitesmoke;
 }
 
-.cityInfoSource p,
-.cityInfoSource a {
+.cityInfoSource p, .cityInfoSource a {
     color: whitesmoke;
     margin-bottom: 0px;
     padding: 0.5rem;
@@ -568,10 +530,7 @@ img {
 /* End of Directory Page Base Styling */
 
 /* Join Page Base Styling */
-.joinTitle,
-label,
-h3,
-#thankYouPage h2 {
+.joinTitle, label, h3, #thankYouPage h2 {
     color: #195216;
 }
 
@@ -581,8 +540,7 @@ h3,
     margin-left: 3rem;
 }
 
-.joinForm h3,
-.membershipBenefits h3 {
+.joinForm h3, .membershipBenefits h3 {
     font-size: 2rem;
 }
 
@@ -593,8 +551,7 @@ h3,
     text-align: center;
 }
 
-.applicantInfo label,
-.businessInfo label {
+.applicantInfo label, .businessInfo label {
     font-size: 1.5rem;
 }
 
@@ -607,8 +564,7 @@ h3,
     padding-top: 0px;
 }
 
-.applicantInfo *,
-.businessInfo * {
+.applicantInfo *, .businessInfo * {
     display: block;
     padding: 0.5rem;
 }
@@ -617,9 +573,8 @@ h3,
     padding: 0.5rem;
 }
 
-input,
-textarea {
-    border: 1px solid #5c5043;
+input, textarea {
+    border: 1px solid #5C5043;
     border-radius: 0.5rem;
 }
 
@@ -689,8 +644,7 @@ textarea {
     color: #195216;
 }
 
-.contactBox1,
-.contactBox2 {
+.contactBox1, .contactBox2 {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -716,15 +670,12 @@ textarea {
     margin: 1rem auto;
 }
 
-.contactBox1 input,
-.contactBox2 input {
+.contactBox1 input, .contactBox2 input {
     max-width: 10rem;
     padding: 0.25rem;
 }
 
-.contactBox1 label,
-.contactBox2 label,
-#message {
+.contactBox1 label, .contactBox2 label, #message {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -764,8 +715,7 @@ textarea {
     width: fit-content;
 }
 
-.chamberInfoTitle,
-.contactFormTitle {
+.chamberInfoTitle, .contactFormTitle {
     border-bottom: 1px solid black;
     padding-bottom: 0.5rem;
     width: 100%;
@@ -832,7 +782,7 @@ footer {
 }
 
 hr {
-    color: #5c5043;
+    color: #5C5043;
     width: 90%;
     font-size: large;
 }
